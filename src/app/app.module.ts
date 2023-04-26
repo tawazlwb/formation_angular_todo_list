@@ -5,9 +5,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListTodosComponent } from './pages/todos/list-todos/list-todos.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ListTodosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
