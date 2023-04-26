@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListTodosComponent } from './pages/todos/list-todos/list-todos.component';
 import { TodoItemComponent } from './pages/todos/list-todos/todo-item/todo-item.component';
+import { PipesModule } from 'src/app/providers/ui/pipes/pipes.module';
 
 @NgModule({
   declarations: [AppComponent, ListTodosComponent, TodoItemComponent],
@@ -23,6 +24,7 @@ import { TodoItemComponent } from './pages/todos/list-todos/todo-item/todo-item.
     MatIconModule,
     HttpClientModule,
     MatCardModule,
+    PipesModule,
   ],
   providers: [],
   exports: [],
