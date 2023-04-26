@@ -1,1 +1,6 @@
-<p>list-todos works!</p>
+<!-- ? Use "| async" to read the content of an Observable -->
+<ng-container *ngFor="let todo of todos$ | async">
+  <!-- ? [id] = send data to the child (input) -->
+  <!-- ? (done) = receive events from the child (output) -->
+  <app-todo-item [todo]="todo" (done)="markDone(todo)"></app-todo-item>
+</ng-container>

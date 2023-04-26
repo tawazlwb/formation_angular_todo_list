@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ todo?.title ?? "NO TITLE" }}</mat-card-title>
+    <mat-card-subtitle>Todo #{{ todo?.id ?? "?" }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="done.emit()" [disabled]="todo?.done">
+      Mark as done
+    </button>
+  </mat-card-actions>
+</mat-card>

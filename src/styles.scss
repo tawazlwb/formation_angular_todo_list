@@ -6,7 +6,7 @@ $todo-list-primary: mat.define-palette(mat.$indigo-palette);
 $todo-list-accent: mat.define-palette(mat.$lime-palette);
 $todo-list-warn: mat.define-palette(mat.$red-palette);
 
-$todo-list-theme: mat.define-light-theme(
+$todo-list-theme: mat.define-dark-theme(
   (
     typography: mat.define-typography-config(),
     color: (

@@ -7,9 +7,15 @@ import { TodosService } from 'src/app/providers/todos/todos.service';
   styleUrls: ['./list-todos.component.scss'],
 })
 export class ListTodosComponent {
-  constructor(private service: TodosService) {
-    this.service.getTodosList().subscribe((todos) => {
-      console.log('There is ' + todos.length + ' todos in the database');
+  // ! When you create an observable variable, never re-assign it !
+  readonly todos$ = this.service.getTodosList();
+
+  constructor(private service: TodosService) {}
+
+  markDone(todo: ITodo) {
+    this.service.toggleTodoDone(todo).subscribe((isDone) => {
+      console.log('Todo is now ' + isDone ? 'done' : 'to be done');
     });
+    console.log('Mark todo #' + todo.id + ' as done');
   }
 }
