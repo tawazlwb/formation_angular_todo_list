@@ -8,6 +8,7 @@ $todo-list-warn: mat.define-palette(mat.$red-palette);
 
 $todo-list-theme: mat.define-light-theme(
   (
+    typography: mat.define-typography-config(),
     color: (
       primary: $todo-list-primary,
       accent: $todo-list-accent,
