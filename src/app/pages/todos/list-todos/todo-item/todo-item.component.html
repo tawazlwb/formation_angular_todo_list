@@ -1,7 +1,8 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{ todo?.title ?? "NO TITLE" }}</mat-card-title>
+    <mat-card-title>{{ todo?.title ?? "no title" }}</mat-card-title>
     <mat-card-subtitle>Todo #{{ todo?.id ?? "?" }}</mat-card-subtitle>
+    <mat-card-subtitle>Todo #{{ todo?.id ?? "?" }}, created at {{ todo?.createdAt | date:'dd/MM/yyyy HH:mm:ss' }}</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-actions>
