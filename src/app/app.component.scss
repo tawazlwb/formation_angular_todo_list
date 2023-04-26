@@ -2,3 +2,10 @@
   // ! ALWAYS DO THAT
   display: block;
 }
+
+mat-toolbar {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
