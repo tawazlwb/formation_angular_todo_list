@@ -4,8 +4,15 @@ import { ListTodosComponent } from 'src/app/pages/todos/list-todos/list-todos.co
 
 const routes: Routes = [
   { path: 'todos-list', component: ListTodosComponent },
+  {
+    path: 'add-todo',
+    loadChildren: () =>
+      import('./pages/todos/add-todo/add-todo.module').then(
+        (m) => m.AddTodoModule
+      ),
+  }, // ? Redirect route always use pathMatch "full"
   // ! Those 2 routes should always be last !
-  { path: '', redirectTo: 'todos-list', pathMatch: 'full' }, // ? Redirect route always use pathMatch "full"
+  { path: '', redirectTo: 'todos-list', pathMatch: 'full' },
   { path: '**', redirectTo: 'todos-list', pathMatch: 'full' },
 ];
 
