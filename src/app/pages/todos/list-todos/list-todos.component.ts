@@ -8,7 +8,7 @@ import { TodosService } from 'src/app/providers/todos/todos.service';
 })
 export class ListTodosComponent {
   // ! When you create an observable variable, never re-assign it !
-  readonly todos$ = this.service.getTodosList();
+  readonly todos$ = this.service.todos$;
 
   constructor(private service: TodosService) {}
 
