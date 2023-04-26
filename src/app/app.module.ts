@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,6 +19,7 @@ import { ListTodosComponent } from './pages/todos/list-todos/list-todos.componen
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   exports: [],
