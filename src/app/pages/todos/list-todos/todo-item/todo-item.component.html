@@ -5,7 +5,7 @@
   </mat-card-header>
 
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="done.emit()" [disabled]="todo?.done">
+    <button mat-raised-button color="primary" (click)="done.emit(); $event.stopPropagation()" [disabled]="todo?.done">
       Mark as done
     </button>
   </mat-card-actions>
