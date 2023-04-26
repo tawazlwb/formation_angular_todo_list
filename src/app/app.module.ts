@@ -7,11 +7,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DirectivesModule } from 'src/app/providers/ui/directives/directives.module';
+import { PipesModule } from 'src/app/providers/ui/pipes/pipes.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListTodosComponent } from './pages/todos/list-todos/list-todos.component';
 import { TodoItemComponent } from './pages/todos/list-todos/todo-item/todo-item.component';
-import { PipesModule } from 'src/app/providers/ui/pipes/pipes.module';
 
 @NgModule({
   declarations: [AppComponent, ListTodosComponent, TodoItemComponent],
@@ -25,6 +26,7 @@ import { PipesModule } from 'src/app/providers/ui/pipes/pipes.module';
     HttpClientModule,
     MatCardModule,
     PipesModule,
+    DirectivesModule,
   ],
   providers: [],
   exports: [],

@@ -16,4 +16,8 @@ export class ListTodosComponent {
   markDone(todo: ITodo) {
     this.service.toggleTodoDone(todo);
   }
+
+  tracker(id: number, todo: ITodo) {
+    return `${todo.id}-${todo.title}-${todo.done}`;
+  }
 }
