@@ -13,9 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListTodosComponent } from './pages/todos/list-todos/list-todos.component';
 import { TodoItemComponent } from './pages/todos/list-todos/todo-item/todo-item.component';
+import { EditTodoComponent } from './pages/todos/edit-todo/edit-todo.component';
 
 @NgModule({
-  declarations: [AppComponent, ListTodosComponent, TodoItemComponent],
+  declarations: [AppComponent, ListTodosComponent, TodoItemComponent, EditTodoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

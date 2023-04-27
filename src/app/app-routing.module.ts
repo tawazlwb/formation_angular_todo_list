@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditTodoComponent } from 'src/app/pages/todos/edit-todo/edit-todo.component';
+import { EditTodoGuard } from 'src/app/pages/todos/edit-todo/edit-todo.guard';
 import { ListTodosComponent } from 'src/app/pages/todos/list-todos/list-todos.component';
 
 const routes: Routes = [
@@ -14,6 +16,11 @@ const routes: Routes = [
           import('./pages/todos/add-todo/add-todo.module').then(
             (m) => m.AddTodoModule
           ),
+      },
+      {
+        path: 'edit/:id',
+        canActivate: [EditTodoGuard],
+        component: EditTodoComponent,
       },
       { path: '**', redirectTo: 'todos', pathMatch: 'full' },
     ],
