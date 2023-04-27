@@ -14,7 +14,7 @@
     <button
       mat-raised-button
       color="primary"
-      (click)="done.emit(); $event.stopPropagation()"
+      (click)="done.emit(todo); $event.stopPropagation()"
       [disabled]="todo?.done"
     >
       Mark as done

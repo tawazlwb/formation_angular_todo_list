@@ -19,7 +19,7 @@ export class TodoItemComponent {
 
   // ? Output : send data to the parent element (call "emit")
   @Output()
-  done = new EventEmitter<void>();
+  done = new EventEmitter<ITodo>();
 
   // ? Bind to an attribute of the component (style.xxx, class.xxx, attr.xxx, etc)
   @HostBinding('style.opacity')

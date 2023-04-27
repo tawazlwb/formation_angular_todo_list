@@ -2,5 +2,5 @@
 <ng-container *ngFor="let todo of todos$ | async; trackBy: tracker">
   <!-- ? [id] = send data to the child (input) -->
   <!-- ? (done) = receive events from the child (output) -->
-  <app-todo-item [todo]="todo" (done)="markDone(todo)"></app-todo-item>
+  <app-todo-item [todo]="todo" (done)="markDone($event)"></app-todo-item>
 </ng-container>

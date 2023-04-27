@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { StateService } from 'src/app/providers/state/state.service';
-import { TodosService } from 'src/app/providers/todos/todos.service';
 
 @Component({
   selector: 'app-list-todos',
@@ -17,6 +16,8 @@ export class ListTodosComponent {
     this.service.toggleTodoDone(todo);
   }
 
+  // ? Tracking function for ngFor loops
+  // ? When Angular creates a loop with ngFor, it tracks items with their memory reference. Using a tracking function, we can specify what to use instead, so here we use a string
   tracker(id: number, todo: ITodo) {
     return `${todo.id}-${todo.title}-${todo.done}`;
   }
