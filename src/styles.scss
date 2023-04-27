@@ -2,8 +2,8 @@
 
 @include mat.core();
 
-$todo-list-primary: mat.define-palette(mat.$indigo-palette);
-$todo-list-accent: mat.define-palette(mat.$lime-palette);
+$todo-list-primary: mat.define-palette(mat.$lime-palette);
+$todo-list-accent: mat.define-palette(mat.$orange-palette);
 $todo-list-warn: mat.define-palette(mat.$red-palette);
 
 $todo-list-theme: mat.define-dark-theme(

@@ -1,28 +1,11 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "My todo item",
-      "done": true,
-      "createdAt": 1682516563754
-    },
-    {
-      "id": 2,
-      "title": "My todo item",
-      "done": true,
-      "createdAt": 1682516563754
-    },
-    {
-      "id": 3,
-      "title": "My todo item",
-      "done": false,
-      "createdAt": 1682516563754
-    },
-    {
-      "id": 4,
-      "title": "My todo item",
-      "done": false,
-      "createdAt": 1682516563754
+      "title": "My first todo",
+      "content": "Something to do",
+      "createdAt": 1682584462648,
+      "id": 0.7883674079965461,
+      "done": false
     }
   ]
 }

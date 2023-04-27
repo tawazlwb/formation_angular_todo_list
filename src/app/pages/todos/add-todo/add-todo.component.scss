@@ -1,3 +1,14 @@
 :host {
-  display: block;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  align-items: stretch;
+  justify-content: flex-start;
 }

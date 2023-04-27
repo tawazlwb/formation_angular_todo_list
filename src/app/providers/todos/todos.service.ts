@@ -21,6 +21,25 @@ export class TodosService {
     return this.http.get<ITodo[]>('http://localhost:3000/todos');
   }
 
+  addTodo(todo: Partial<ITodo>) {
+    const payload = {
+      ...todo,
+      createdAt: Date.now(),
+      id: Math.random(),
+      done: false,
+    };
+
+    return this.http.post('http://localhost:3000/todos', payload);
+  }
+
+  todoExists(title: string) {
+    return this.http
+      .get<ITodo[]>('http://localhost:3000/todos', {
+        params: { title },
+      })
+      .pipe(map((todos) => !!todos.length));
+  }
+
   toggleTodoDone(todo: ITodo) {
     const id = todo.id;
     const isDone = todo.done;
