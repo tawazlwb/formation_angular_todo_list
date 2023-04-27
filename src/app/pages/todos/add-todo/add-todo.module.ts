@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { AddTodoRoutingModule } from './add-todo-routing.module';
 import { AddTodoComponent } from './add-todo.component';
@@ -18,6 +19,7 @@ import { AddTodoComponent } from './add-todo.component';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
+    MatIconModule,
   ],
 })
 export class AddTodoModule {}
