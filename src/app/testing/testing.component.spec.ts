@@ -6,7 +6,7 @@ import { Subject, delay, of } from 'rxjs';
 import { TodosService } from 'src/app/providers/todos/todos.service';
 import { TestingComponent } from './testing.component';
 
-fdescribe('TestingComponent', () => {
+describe('TestingComponent', () => {
   let component: TestingComponent;
   let fixture: ComponentFixture<TestingComponent>;
 
@@ -96,7 +96,7 @@ fdescribe('TestingComponent', () => {
   });
 });
 
-fdescribe('TestingComponent isolated', () => {
+describe('TestingComponent isolated', () => {
   let component: TestingComponent;
   let service: TodosService;
 

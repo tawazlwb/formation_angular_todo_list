@@ -1,23 +1,37 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { StateService } from 'src/app/providers/state/state.service';
 import { ListTodosComponent } from './list-todos.component';
 
-describe('ListTodosComponent', () => {
+fdescribe('ListTodosComponent', () => {
   let component: ListTodosComponent;
-  let fixture: ComponentFixture<ListTodosComponent>;
+  let service: StateService;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ListTodosComponent ]
-    })
-    .compileComponents();
+  const todos: any = [];
 
-    fixture = TestBed.createComponent(ListTodosComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(() => {
+    service = {
+      toggleTodoDone: jasmine.createSpy(),
+      state$: todos,
+    } as any;
+    component = new ListTodosComponent(service);
   });
 
-  it('should create', () => {
+  it('Should create an instance', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('markDone should call service.toggleTodoDone', () => {
+    const todo = {} as any;
+    component.markDone(todo);
+    expect(service.toggleTodoDone).toHaveBeenCalledOnceWith(todo);
+  });
+
+  it('component.todos$ should be service.state$', () => {
+    expect(component.todos$).toBe(service.state$);
+  });
+
+  it('Tracker should return a predtermined string', () => {
+    const todo: ITodo = { id: 1, done: false, title: 'title', createdAt: 0 };
+    const expected = `${todo.id}-${todo.title}-${todo.done}`;
+    expect(component.tracker(0, todo)).toEqual(expected);
   });
 });
